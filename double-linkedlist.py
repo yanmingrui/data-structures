@@ -1,5 +1,5 @@
 ### python realized double-linkedlist
-```
+
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @File  : double_linkedList.py
@@ -176,4 +176,4 @@ A.InsertNode(4,3)
 A.DeleteNode(2)
 print(A.SearchNode(2))
 print(A)
-```
+
