@@ -140,6 +140,24 @@ class DoubleLinkedList:
             nodeFind.prev = None
             self.length -= 1
 
+##可以使用recursive和iterative 解决
+    def reverse(self):
+        if self.length == 1:
+            return self.head
+
+        tail = self.head
+        changed_number = tail.next
+        while(changed_number != None):
+
+            tail.next = changed_number.next
+            if changed_number.next:
+                changed_number.next.prev = tail
+            changed_number.next = self.head
+            self.head.prev = changed_number
+            changed_number.prev = None
+            self.head = changed_number
+            changed_number = tail.next
+
 #search node at the index-th
     def SearchNode(self, index):
         if self.length == 0:
